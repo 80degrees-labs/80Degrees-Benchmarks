@@ -23,11 +23,8 @@ implementation belong in **crbn**; this repository owns the evidence and study t
 
 ![Study coverage, provisional](public/studies/october-2026/coverage.svg)
 
-The chart is a dated ledger snapshot, **not a leaderboard or final report**.
-Execution finished on 27 October 2026 at 17:18 UTC: **352 scored cells and four
-historical exclusions**, with no pending trials. The **available-evidence analysis
-is complete as of 28 October**. Unresolved outcomes remain unknown; completion of
-analysis does not make the evidence complete. No additional paid runs were made.
+Execution completed on 27 October 2026 at 17:18 UTC. The analysis, dated
+28 October 2026, covers **352 scored cells and four historical exclusions**.
 
 ### Reports and evidence
 
@@ -78,18 +75,8 @@ token ratios include 1 for both models; detailed bounds are in the reports.
 
 ![Evidence-quality pie chart](public/studies/october-2026/charts/evidence-quality.svg)
 
-The audit identifies 42 scored zeroes with an unavailable verifier, four mixed
-browser/assertion failures and four historical exclusions. Raw scores are retained.
-Resolved-pair and missing-outcome sensitivity analyses also do not establish the
-claims. These are first-party findings, not an independent audit or certification.
-
-**The study is not cancelled.** There are no pending trials. Observed wins, losses
-and draws are reported above. Statistical confidence and unknown outcomes are
-separate from the observed scoreboard. The 42 unavailable-verifier trials have no
-retained solution artifacts or original containers for verifier-only repair.
-Rerunning only agent failures and replacing their scores would bias the comparison.
-A further attempt would be a separate, disclosed follow-up with the existing cap,
-not a silent replacement or a guarantee of a different claim verdict.
+See [Final analysis and limitations](public/studies/october-2026/RESULTS.md) for
+the outcome classifications, exclusions and sensitivity analyses.
 
 ## One runner, explicit comparisons
 

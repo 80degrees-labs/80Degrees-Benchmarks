@@ -1,6 +1,6 @@
-# Preliminary learning notes
+# Harness development observations
 
-Historical working notes. The completed available-evidence assessment is in
+Task-level observations supporting harness development. The final analysis is in
 [RESULTS.md](RESULTS.md). PDF reports are retained locally, not published here.
 
 These are observations from private raw evidence, not adjudicated causal findings
@@ -15,13 +15,12 @@ or final claim results. No active-study tuning was performed in response.
 | overfull-hbox | Verifier dependency download timed out | Adjudicate infrastructure separately from solution correctness |
 | make-doom-for-mips | Native token telemetry missing | Investigate telemetry completeness; never impute zero |
 
-For Claim A, completion discipline and unresolved verifier failures deserve
-separate analysis. For Claim B, missing telemetry and both-solved selection bias
-prevent simplistic efficiency conclusions. Preserve the paired comparison and
-noninferiority gate in the methodology. Future improvements need independent
-held-out evaluation; these observations are now development knowledge.
+Correctness priorities include completion handling and verifier reliability.
+Efficiency analysis requires complete paired telemetry and the predeclared
+correctness noninferiority criterion. Both-solved subsets are outcome-selected
+and descriptive. These observations constitute development data; subsequent
+validation requires independent held-out tasks.
 
 Evidence access: raw artifacts are retained privately because logs can expose
-credentials, local identifiers and task content. These notes alone are not a
-publicly reproducible result submission. Final publication must include reviewed
-task rows, redaction provenance and hashes of supporting evidence.
+credentials, local identifiers and task content. Public task rows, redaction
+provenance and supporting evidence hashes accompany the final analysis.

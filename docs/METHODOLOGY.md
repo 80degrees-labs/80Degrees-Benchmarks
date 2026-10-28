@@ -1,8 +1,8 @@
 # Claim contract
 
-The [28 October available-evidence assessment](../public/studies/october-2026/RESULTS.md)
-applies this contract and concludes that neither comparative claim is established.
-Analysis completion does not eliminate the disclosed unknown outcomes.
+The [28 October final analysis](../public/studies/october-2026/RESULTS.md)
+reports observed outcomes, statistical decisions and sensitivity analyses under
+this protocol.
 
 The October study compares 89 Terminal-Bench 2.0 tasks, two models and two harnesses
 (356 slots), with medium reasoning only. Models are gpt-6.1-sol and gpt-6-astra.

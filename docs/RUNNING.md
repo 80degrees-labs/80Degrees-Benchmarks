@@ -20,7 +20,7 @@ Build the native `runner.ts` using Bun 1.4.3 with `--target=bun` and
 generated assets, `bun-linux-x64/bun`, the Linux x64 baseline pi-natives 18.12.3
 addon in `native/`, and `ca-certificates.crt`. Follow the source adapter's expected
 layout. Pin the engine checkout independently of the parent repository gitlink.
-This setup is not a downloadable redistribution of the user's private runtime.
+Runtime dependencies must be provisioned locally; they are not distributed in this repository.
 
 For Codex, set `BENCH_CODEX_DIST` to the pinned unpacked Linux distribution,
 `BENCH_CA_BUNDLE` to a public CA certificate bundle, and `CODEX_AUTH_JSON_PATH`

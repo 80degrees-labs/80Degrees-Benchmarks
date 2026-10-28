@@ -254,5 +254,5 @@
       "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
     }
   ],
-  "decision": "Original solution snapshots unavailable for verifier-only repair. No selective agent reruns performed; original scores retained."
+  "decision": "Verifier-only replay unavailable: original solution artifacts and containers were not retained."
 }

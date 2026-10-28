@@ -12,7 +12,7 @@
   "codex_cli": "0.163.0",
   "dataset_commit": "69671fbaac6d67a7ef0dfec016cc38a64ef7a77c",
   "harbor_commit": "209a48a7424218828465c3c716b042f2b381dbed",
-  "snapshot_utc": "2026-10-28T09:37:29.388055+00:00",
+  "snapshot_utc": "2026-10-28T09:59:07.544432+00:00",
   "counts": {
     "historical": 4,
     "scored": 352
@@ -20,7 +20,7 @@
   "final": false,
   "claim_a": "Observed raw result: Sol draw; Astra favors Codex. No demonstrated 80 Degrees superiority.",
   "claim_b": "Observed complete-pair tokens favor 80 Degrees; the combined comparable-correctness claim does not pass its evidence gate.",
-  "note": "Ledger state is not proof of a live process or adjudicated correctness.",
+  "note": "Ledger coverage snapshot; outcome classification and statistical results are reported separately.",
   "analysis_complete": true,
   "evidence_complete": false,
   "claim_b_money": "Observed Standard API-equivalent raw complete-pair cost favors 80 Degrees; see api-equivalent-costs.json. Not actual subscription spending."

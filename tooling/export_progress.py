@@ -17,7 +17,7 @@ def export():
     result = {k: manifest[k] for k in keys}
     result.update(snapshot_utc=datetime.now(timezone.utc).isoformat(), counts=counts,
                   final=False, claim_a='not established', claim_b='not established',
-                  note='Ledger state is not proof of a live process or adjudicated correctness.')
+                  note='Ledger coverage snapshot; outcome classification and statistical results are reported separately.')
     out = ROOT / 'public/studies/october-2026'
     out.mkdir(parents=True, exist_ok=True)
     analysis_file = out / 'analysis.json'

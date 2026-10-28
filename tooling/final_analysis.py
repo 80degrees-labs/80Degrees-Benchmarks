@@ -106,7 +106,7 @@ def export_private():
                       frozen_manifest_sha256=sha(ROOT/'frozen.json'),
                       redaction='Allowlisted numeric outcomes, classifications, task IDs and content hashes only. No transcript, credential, account/session identifier or local path exported.',
                       scope='370 ledger reservations including historical attempts; separate synthetic preflights are outside this ledger.',
-                      audit_limit='First-party artifact review, not an independent audit. Hashes attest retained evidence identity, not correctness by themselves.')
+                      audit_limit='Study-owner artifact review. Independent validation requires access to source evidence; hashes support artifact integrity checks.')
     (OUT/'provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
 
 
@@ -197,7 +197,7 @@ def analyze():
                 claim_b_tokens='Observed complete-pair tokens favor 80 Degrees; the combined comparable-correctness claim does not pass its evidence gate.',
                 claim_b_money='Observed Standard API-equivalent raw complete-pair cost favors 80 Degrees; see api-equivalent-costs.json. Not actual subscription spending.',
                 analysis_complete=True, evidence_complete=False,
-                limitation='Final conclusions on available evidence; unresolved verifier outcomes and historical exclusions remain unknown, not credited passes. No new paid trials.')
+                limitation='Unavailable-verifier outcomes and historical exclusions remain unknown. Findings apply to the recorded medium-reasoning Terminal-Bench 2.0 profiles.')
     (OUT/'analysis.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 

@@ -20,5 +20,5 @@
   "frozen_manifest_sha256": "2745c161edc0dcc2dcb11514cbcb68a2078a8b6779727469187cff620374328c",
   "redaction": "Allowlisted numeric outcomes, classifications, task IDs and content hashes only. No transcript, credential, account/session identifier or local path exported.",
   "scope": "370 ledger reservations including historical attempts; separate synthetic preflights are outside this ledger.",
-  "audit_limit": "First-party artifact review, not an independent audit. Hashes attest retained evidence identity, not correctness by themselves."
+  "audit_limit": "Study-owner artifact review. Independent validation requires access to source evidence; hashes support artifact integrity checks."
 }
