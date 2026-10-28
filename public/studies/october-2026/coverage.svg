@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="190" viewBox="0 0 760 190" role="img" aria-label="Provisional coverage: 352 of 356 scored slots">
+<rect width="760" height="190" rx="14" fill="#101827"/>
+<g font-family="sans-serif" fill="#f3f4f6"><text x="40" y="42" font-size="20">TERMINAL-BENCH 2.0 · MEDIUM</text>
+<text x="40" y="73" font-size="16">352 / 356 slots have recorded verifier outcomes · provisional</text>
+<rect x="40" y="94" width="650" height="20" rx="4" fill="#374151"/>
+<rect x="40" y="94" width="643" height="20" rx="4" fill="#5eead4"/>
+<text x="40" y="144" font-size="13">Snapshot 2026-10-28T09:04:23 UTC · includes unadjudicated outcomes</text>
+<text x="40" y="167" font-size="13">Neither superiority nor efficiency has been established.</text></g></svg>

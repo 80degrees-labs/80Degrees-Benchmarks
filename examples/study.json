@@ -1,0 +1,34 @@
+{
+  "study_id": "REPLACE_UNIQUE_STUDY_ID",
+  "harbor_version_output": "REPLACE_EXACT_HARBOR_VERSION_OUTPUT",
+  "dataset_commit": "REPLACE_EXACT_DATASET_COMMIT",
+  "source_commit": "REPLACE_CRBN_COMMIT",
+  "tasks": [
+    "REPLACE_ABSOLUTE_TASK_DIRECTORY"
+  ],
+  "agents": [
+    {
+      "id": "80degrees",
+      "harbor": {
+        "import_path": "eighty_degrees:EightyDegrees",
+        "model_name": "openai/gpt-6.1-sol",
+        "kwargs": {
+          "bundle_path": "REPLACE_80DEGREES_BUNDLE",
+          "source_commit": "REPLACE_CRBN_COMMIT",
+          "reasoning_effort": "medium"
+        }
+      }
+    },
+    {
+      "id": "codex",
+      "harbor": {
+        "import_path": "pinned_codex:PinnedCodex",
+        "model_name": "openai/gpt-6.1-sol",
+        "kwargs": {
+          "version": "0.163.0",
+          "reasoning_effort": "medium"
+        }
+      }
+    }
+  ]
+}

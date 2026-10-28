@@ -1,0 +1,29 @@
+{
+  "id": "cursor",
+  "harbor": {
+    "import_path": "portable_cli:PortableCLI",
+    "model_name": "REPLACE_EXACT_MODEL",
+    "kwargs": {
+      "argv": [
+        "/opt/benchmark-cli/bin/agent",
+        "-p",
+        "--force",
+        "--model",
+        "{model}",
+        "--output-format",
+        "json",
+        "{prompt}"
+      ],
+      "version_argv": [
+        "/opt/benchmark-cli/bin/agent",
+        "--version"
+      ],
+      "env_names": [
+        "CURSOR_API_KEY"
+      ],
+      "reasoning_effort": "medium",
+      "expected_version": "REPLACE_EXACT_VERSION_OUTPUT",
+      "bundle_path": "REPLACE_ABSOLUTE_SECRET_FREE_LINUX_BUNDLE"
+    }
+  }
+}

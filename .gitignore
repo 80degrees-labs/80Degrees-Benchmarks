@@ -1,0 +1,21 @@
+# Default deny: the live study contains credentials-adjacent logs and local paths.
+/*
+!/.gitignore
+!/README.md
+!/CONTRIBUTING.md
+!/SECURITY.md
+!/public/
+!/tooling/
+!/examples/
+!/tests/
+!/docs/
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+**/.env*
+**/*auth*.json
+**/*secret*
+**/*.sqlite*
+**/*.log
+**/node_modules/
+**/.venv/
