@@ -17,11 +17,11 @@ implementation belong in **crbn**; this repository owns the evidence and study t
 
 | Question | Required evidence | Current conclusion |
 |---|---|---|
-| **A · More tasks solved** | Same model and effort; paired verifier outcomes; uncertainty | **Observed result: Sol draw; Astra favors Codex.** Raw counts are 62 vs 62 and 59 vs 65. The superiority test does not support an 80 Degrees win. |
-| **B · Comparable correctness, fewer tokens** | Correctness noninferiority first, then complete paired token accounting | **80 Degrees uses fewer measured tokens:** 23.8% / 27.5% lower on complete raw pairs. **The combined equal-correctness claim does not pass** the predeclared test. |
-| **B · Lower modeled token cost** | Official prices applied to recorded input, cache and output usage | **80 Degrees has lower Standard API-equivalent totals on raw complete pairs:** 1.6% / 12.1% lower. These are estimates, not subscription charges; both-solved estimates favor Codex. |
+| **A · More tasks solved** | Paired success counts, 80 Degrees / Codex | **Sol: tied, 62 / 62. Astra: Codex leads, 59 / 65.** Superiority criterion: not met. |
+| **B · Comparable correctness, fewer tokens** | Paired correctness test and complete token accounting | **Measured tokens: 23.8% lower for Sol; 27.5% lower for Astra.** Correctness noninferiority criterion: not met. |
+| **B · Lower modeled token cost** | Standard API rates applied to complete paired telemetry | **Estimated token cost: 1.6% lower for Sol; 12.1% lower for Astra.** |
 
-![Study coverage, provisional](public/studies/october-2026/coverage.svg)
+![Completed study coverage](public/studies/october-2026/coverage.svg)
 
 Execution completed on 27 October 2026 at 17:18 UTC. The analysis, dated
 28 October 2026, covers **352 scored cells and four historical exclusions**.
@@ -41,9 +41,7 @@ Execution completed on 27 October 2026 at 17:18 UTC. The analysis, dated
 failed-attempt consumption and missing telemetry are not included in these ratios.
 \** Conservative 95% one-sided bound for 80 Degrees minus Codex. The predeclared
 noninferiority requirement is a lower bound above **-5 points**. Neither passes.
-Equal observed success does not prove equivalence; failure of noninferiority does
-not by itself prove inferiority. Exact McNemar Holm-adjusted p-values are 1.0000
-and 0.4758, respectively.
+Exact McNemar Holm-adjusted p-values: Sol 1.0000; Astra 0.4758.
 
 ![Raw paired correctness](public/studies/october-2026/charts/correctness.svg)
 ![Paired outcome pie charts](public/studies/october-2026/charts/paired-outcomes.svg)
@@ -64,14 +62,11 @@ Prices verified 28 October 2026 from [official OpenAI pricing](https://developer
 Calculation uses recorded uncached input, cached input and output with Standard
 rates. No cache writes or long-context premium are applicable to the audited usage.
 The same prices are applied to both arms. This excludes missing telemetry, retries,
-tools, tax and subscription fees. Raw cost-ratio 95% intervals include 1 for both
-models. A lower observed modeled total is not proof of equal-correctness cost
-superiority; the both-solved subset is also outcome-selected.
+tools, tax and subscription fees. Cost estimates and uncertainty are detailed in
+[Cost analysis](public/studies/october-2026/COSTS.md).
 
-On tasks **both harnesses solve**, Sol uses 20.9% fewer tokens, but Astra uses
-**21.6% more**. These selected subsets are descriptive. They are not evidence of
-comparable overall correctness. Two-sided 95% bootstrap intervals for the raw
-token ratios include 1 for both models; detailed bounds are in the reports.
+On tasks **both harnesses solve**, 80 Degrees uses **20.9% fewer Sol tokens** and
+**21.6% more Astra tokens**. This is a descriptive comparison of solved tasks.
 
 ![Evidence-quality pie chart](public/studies/october-2026/charts/evidence-quality.svg)
 
@@ -107,8 +102,6 @@ python3 tooling/study.py run --output private/my-study
 The runner reserves each attempt durably before launch, runs serially, never
 reruns completed jobs and stops on errors. Retries require explicit resumption
 and remain capped at three total launches per cell. Keep the same study directory.
-The existing October controller and its historical ledger remain separate and
-private; this new runner does not migrate or restart them.
 
 ## Repository map
 

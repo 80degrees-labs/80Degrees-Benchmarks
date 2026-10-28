@@ -9,22 +9,20 @@ The evaluation comprises 352 scored cells and four historical exclusions.
 **A - more tasks solved: not supported by this study.** Sol raw success tied at
 62/87 per arm; Astra was 59/89 for 80 Degrees versus 65/89 for Codex. Exact paired
 McNemar p-values are 1 and 0.2378845; Holm-adjusted values across the two models
-are 1 and 0.4757690. This does not demonstrate superiority. It also does not
-demonstrate statistically significant inferiority.
+are 1 and 0.4757690. Superiority criterion: not met.
 
 **B - comparable correctness with fewer tokens: not established.** The predeclared
 noninferiority margin is 5 percentage points. The conservative 95% one-sided lower
 bounds for the paired success difference (80D minus Codex) are -11.84 points for
 Sol and -19.85 for Astra, below the required -5 points. The combined correctness
-and efficiency criterion is therefore unmet. This result does not establish
-inferiority.
+and efficiency criterion is therefore unmet.
 
 **B - modeled token cost: observed raw complete-pair totals favor 80 Degrees.**
 At official Standard API rates checked 28 October, estimates are $11.23 vs $11.42
 for Sol (1.6% lower) and $55.99 vs $63.68 for Astra (12.1% lower). See
 [the complete cost calculation](COSTS.md). These are API-equivalent estimates;
-actual subscription spending remains unmeasured. The both-solved cost subset
-favors Codex, and the correctness gate remains unchanged.
+subscription fees are excluded. Both-solved cost estimates are 3.9% higher for
+Sol and 19.4% higher for Astra with 80 Degrees.
 
 ## Token results and uncertainty
 
@@ -33,7 +31,7 @@ Complete raw telemetry pairs: Sol 86, Astra 88. Native input-plus-output totals 
 Ratios are 0.761664 and 0.724691, or 23.8% and 27.5% fewer recorded tokens.
 Paired percentile bootstrap uses 50,000 samples and seed 10262026. Central 95%
 ratio intervals are [0.563, 1.047] and [0.488, 1.035]. One-sided 95% upper bounds
-are 0.995 and 0.984; the correctness gate still fails, and missing usage remains.
+are 0.995 and 0.984.
 
 On resolved complete pairs, ratios are 0.662 (73 Sol pairs) and 0.923 (74 Astra
 pairs). On both-solved pairs, ratios are 0.791 (56 Sol pairs) and 1.216 (53 Astra
