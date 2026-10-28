@@ -31,8 +31,6 @@ analysis does not make the evidence complete. No additional paid runs were made.
 
 ### Reports and evidence
 
-- [Investor assessment (PDF)](public/studies/october-2026/reports/80degrees-investor-benchmark-report.pdf)
-- [Harness refinement report (PDF)](public/studies/october-2026/reports/80degrees-harness-refinement-report.pdf)
 - [Final analysis and limitations](public/studies/october-2026/RESULTS.md)
 - [Task-level CSV](public/studies/october-2026/task-results.csv), [analysis JSON](public/studies/october-2026/analysis.json), [attempt accounting](public/studies/october-2026/attempts.json), [provenance and redaction](public/studies/october-2026/provenance.json)
 - [API-equivalent cost calculation](public/studies/october-2026/COSTS.md) and [numeric estimates](public/studies/october-2026/api-equivalent-costs.json)

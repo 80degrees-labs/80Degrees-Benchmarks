@@ -13,6 +13,9 @@ def audit():
     failures = []
     for name in set(filter(None, names)):
         path = ROOT / name
+        if path.suffix.lower() == '.pdf':
+            failures.append(f'PDF reports must remain local: {name}')
+            continue
         if name not in ALLOWED and Path(name).parts[0] not in DIRS:
             failures.append(f'Outside publication allowlist: {name}')
             continue
@@ -24,18 +27,11 @@ def audit():
         if path.stat().st_size > 2_000_000:
             failures.append(f'Oversized artifact requires review: {name}')
             continue
-        if path.suffix == '.pdf' and Path(name).parent == Path('public/studies/october-2026/reports'):
-            from pypdf import PdfReader
-            reader = PdfReader(path)
-            if reader.is_encrypted or '/EmbeddedFiles' in str(reader.trailer['/Root'].get('/Names', {})):
-                failures.append(f'Encrypted or embedded-file PDF: {name}')
-            text = '\n'.join(page.extract_text() or '' for page in reader.pages)
-        else:
-            try:
-                text = path.read_text()
-            except UnicodeDecodeError:
-                failures.append(f'Binary artifact requires review: {name}')
-                continue
+        try:
+            text = path.read_text()
+        except UnicodeDecodeError:
+            failures.append(f'Binary artifact requires review: {name}')
+            continue
         patterns = [r'/(?:Users|home)/[A-Za-z0-9_.-]+/', '-' * 5 + 'BEGIN ' + r'.*PRIVATE KEY' + '-' * 5,
                     r'eyJ[A-Za-z0-9_-]{20,}\.eyJ', r'sk-[A-Za-z0-9_-]{20,}',
                     r'gh[pousr]_[A-Za-z0-9]{20,}']

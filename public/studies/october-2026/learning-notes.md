@@ -1,7 +1,7 @@
 # Preliminary learning notes
 
 Historical working notes. The completed available-evidence assessment is in
-[RESULTS.md](RESULTS.md) and the [refinement report](reports/80degrees-harness-refinement-report.pdf).
+[RESULTS.md](RESULTS.md). PDF reports are retained locally, not published here.
 
 These are observations from private raw evidence, not adjudicated causal findings
 or final claim results. No active-study tuning was performed in response.

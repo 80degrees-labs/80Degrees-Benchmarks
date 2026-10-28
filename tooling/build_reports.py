@@ -1,6 +1,5 @@
 """Build two reports and data-derived charts from the public analysis artifacts."""
 import json
-import shutil
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -25,7 +24,7 @@ ROWS=json.loads((DATA/'task-results.json').read_text())
 MODELS=['gpt-6.1-sol','gpt-6-astra']
 NAMES=['6.1 Sol','6 Astra']
 TEAL='#087f8c'; BLUE='#4056a1'; GREY='#cbd5e1'; AMBER='#c57b17'; INK='#17243a'
-for d in [CHARTS,TEMP,PDF,DATA/'reports']: d.mkdir(parents=True,exist_ok=True)
+for d in [CHARTS,TEMP,PDF]: d.mkdir(parents=True,exist_ok=True)
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,
                      'axes.spines.right':False,'svg.fonttype':'none','figure.facecolor':'white'})
 
@@ -132,7 +131,6 @@ def build(name,story,title):
     doc=SimpleDocTemplate(str(path),pagesize=(612,792),rightMargin=42,leftMargin=42,topMargin=42,bottomMargin=53,
                           title=title,author='80 Degrees',subject='Final assessment of available benchmark evidence')
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
-    shutil.copy2(path,DATA/'reports'/name)
 
 
 def investor():

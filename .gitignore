@@ -18,5 +18,7 @@
 **/*secret*
 **/*.sqlite*
 **/*.log
+**/*.pdf
+public/studies/*/reports/
 **/node_modules/
 **/.venv/
