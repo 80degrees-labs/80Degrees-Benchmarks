@@ -38,7 +38,7 @@ def export():
 <rect x="40" y="94" width="650" height="20" rx="4" fill="#374151"/>
 <rect x="40" y="94" width="{width}" height="20" rx="4" fill="#5eead4"/>
 <text x="40" y="144" font-size="13">Snapshot {result['snapshot_utc'][:19]} UTC · includes unadjudicated outcomes</text>
-<text x="40" y="167" font-size="13">Neither superiority nor efficiency has been established.</text></g></svg>'''
+<text x="40" y="167" font-size="13">Raw correctness: Sol draw; Astra favors Codex. Full scorecard in README.</text></g></svg>'''
     (out / 'coverage.svg').write_text(svg)
 
 

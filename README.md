@@ -13,13 +13,13 @@ from comparing **80 Degrees** with other coding agents through
 [Harbor](https://github.com/harbor-framework/harbor). The application and adapter
 implementation belong in **crbn**; this repository owns the evidence and study tools.
 
-## Evidence, before claims
+## Completed benchmark scorecard
 
 | Question | Required evidence | Current conclusion |
 |---|---|---|
-| **A · More tasks solved** | Same model and effort; paired verifier outcomes; uncertainty | **Not supported by this study.** Raw Sol tied; raw Astra favored Codex. Neither superiority test passed. |
-| **B · Comparable correctness, fewer tokens** | Correctness noninferiority first, then complete paired token accounting | **Not established.** Both models failed the predeclared correctness evidence gate, despite lower raw complete-pair token totals. |
-| **B · Less money** | Observable, comparable monetary cost | **Not measurable from these data.** Subscription access provides no actual per-task dollar charges. |
+| **A · More tasks solved** | Same model and effort; paired verifier outcomes; uncertainty | **Observed result: Sol draw; Astra favors Codex.** Raw counts are 62 vs 62 and 59 vs 65. The superiority test does not support an 80 Degrees win. |
+| **B · Comparable correctness, fewer tokens** | Correctness noninferiority first, then complete paired token accounting | **80 Degrees uses fewer measured tokens:** 23.8% / 27.5% lower on complete raw pairs. **The combined equal-correctness claim does not pass** the predeclared test. |
+| **B · Lower modeled token cost** | Official prices applied to recorded input, cache and output usage | **80 Degrees has lower Standard API-equivalent totals on raw complete pairs:** 1.6% / 12.1% lower. These are estimates, not subscription charges; both-solved estimates favor Codex. |
 
 ![Study coverage, provisional](public/studies/october-2026/coverage.svg)
 
@@ -35,6 +35,7 @@ analysis does not make the evidence complete. No additional paid runs were made.
 - [Harness refinement report (PDF)](public/studies/october-2026/reports/80degrees-harness-refinement-report.pdf)
 - [Final analysis and limitations](public/studies/october-2026/RESULTS.md)
 - [Task-level CSV](public/studies/october-2026/task-results.csv), [analysis JSON](public/studies/october-2026/analysis.json), [attempt accounting](public/studies/october-2026/attempts.json), [provenance and redaction](public/studies/october-2026/provenance.json)
+- [API-equivalent cost calculation](public/studies/october-2026/COSTS.md) and [numeric estimates](public/studies/october-2026/api-equivalent-costs.json)
 
 | Medium reasoning | Raw paired success: 80 Degrees / Codex | Raw token reduction* | Correctness lower bound** |
 |---|---:|---:|---:|
@@ -53,6 +54,25 @@ and 0.4758, respectively.
 ![Paired outcome pie charts](public/studies/october-2026/charts/paired-outcomes.svg)
 ![Token ratios by evidence subset](public/studies/october-2026/charts/token-ratios.svg)
 
+### Cost at official API prices
+
+| Standard API-equivalent USD | 80 Degrees | Codex | Observed difference |
+|---|---:|---:|---:|
+| Sol, 86 raw complete pairs | $11.23 | $11.42 | 80 Degrees 1.6% lower |
+| Astra, 88 raw complete pairs | $55.99 | $63.68 | 80 Degrees 12.1% lower |
+| Sol, 56 both-solved pairs | $5.67 | $5.45 | 80 Degrees 3.9% higher |
+| Astra, 53 both-solved pairs | $33.50 | $28.06 | 80 Degrees 19.4% higher |
+
+![API-equivalent cost by subset](public/studies/october-2026/charts/api-equivalent-cost.svg)
+
+Prices verified 28 October 2026 from [official OpenAI pricing](https://developers.openai.com/api/docs/pricing).
+Calculation uses recorded uncached input, cached input and output with Standard
+rates. No cache writes or long-context premium are applicable to the audited usage.
+The same prices are applied to both arms. This excludes missing telemetry, retries,
+tools, tax and subscription fees. Raw cost-ratio 95% intervals include 1 for both
+models. A lower observed modeled total is not proof of equal-correctness cost
+superiority; the both-solved subset is also outcome-selected.
+
 On tasks **both harnesses solve**, Sol uses 20.9% fewer tokens, but Astra uses
 **21.6% more**. These selected subsets are descriptive. They are not evidence of
 comparable overall correctness. Two-sided 95% bootstrap intervals for the raw
@@ -64,6 +84,14 @@ The audit identifies 42 scored zeroes with an unavailable verifier, four mixed
 browser/assertion failures and four historical exclusions. Raw scores are retained.
 Resolved-pair and missing-outcome sensitivity analyses also do not establish the
 claims. These are first-party findings, not an independent audit or certification.
+
+**The study is not cancelled.** There are no pending trials. Observed wins, losses
+and draws are reported above. Statistical confidence and unknown outcomes are
+separate from the observed scoreboard. The 42 unavailable-verifier trials have no
+retained solution artifacts or original containers for verifier-only repair.
+Rerunning only agent failures and replacing their scores would bias the comparison.
+A further attempt would be a separate, disclosed follow-up with the existing cap,
+not a silent replacement or a guarantee of a different claim verdict.
 
 ## One runner, explicit comparisons
 

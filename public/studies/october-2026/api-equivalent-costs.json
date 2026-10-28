@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-28",
+  "basis": "Standard short-context API-equivalent text-token estimate in USD; not actual subscription spending",
+  "rates_per_million": {
+    "gpt-6.1-sol": {
+      "input": 2,
+      "cache_read": 0.1,
+      "cache_write": 2.5,
+      "output": 10
+    },
+    "gpt-6-astra": {
+      "input": 10,
+      "cache_read": 1,
+      "cache_write": 12.5,
+      "output": 50
+    }
+  },
+  "sources": [
+    "https://developers.openai.com/api/docs/pricing",
+    "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "https://developers.openai.com/api/docs/models/gpt-6-astra"
+  ],
+  "assumptions": [
+    "Same Standard tier for both arms; no regional premium, tools, tax or subscription allocation.",
+    "Observed cache reads retained; zero recorded cache writes. All observed requests and aggregate residuals are below the >272K long-context threshold.",
+    "Two native aggregate-versus-event residuals are priced using aggregate totals; each residual is below 272K input tokens.",
+    "Scored complete pairs only. Unmeasured timeout usage, failed reservations and historical attempts are excluded; not whole-study cost."
+  ],
+  "models": {
+    "gpt-6.1-sol": {
+      "raw_complete": {
+        "n": 86,
+        "native_usd": 11.232668,
+        "codex_usd": 11.420611199999998,
+        "reduction": 0.01645649227599988,
+        "ratio": 0.9835435077240001,
+        "bootstrap_central_95": [
+          0.834168021942829,
+          1.158584202228534
+        ],
+        "bootstrap_upper_one_sided_95": 1.1307586406251258
+      },
+      "resolved_complete": {
+        "n": 73,
+        "native_usd": 8.343869999999999,
+        "codex_usd": 8.8151264,
+        "reduction": 0.05345997080654474,
+        "ratio": 0.9465400291934553,
+        "bootstrap_central_95": [
+          0.7986409100850898,
+          1.1456568058430174
+        ],
+        "bootstrap_upper_one_sided_95": 1.1115715748741002
+      },
+      "both_solved": {
+        "n": 56,
+        "native_usd": 5.6667128,
+        "codex_usd": 5.4523572,
+        "reduction": -0.03931429877705006,
+        "ratio": 1.03931429877705,
+        "bootstrap_central_95": [
+          0.8616079543601917,
+          1.2494448958137905
+        ],
+        "bootstrap_upper_one_sided_95": 1.2189928865047786
+      }
+    },
+    "gpt-6-astra": {
+      "raw_complete": {
+        "n": 88,
+        "native_usd": 55.987396000000004,
+        "codex_usd": 63.677338,
+        "reduction": 0.12076418772405328,
+        "ratio": 0.8792358122759467,
+        "bootstrap_central_95": [
+          0.689182326851454,
+          1.1047118428074756
+        ],
+        "bootstrap_upper_one_sided_95": 1.0673071645168744
+      },
+      "resolved_complete": {
+        "n": 74,
+        "native_usd": 45.93227399999999,
+        "codex_usd": 44.910244000000006,
+        "reduction": -0.02275716872079303,
+        "ratio": 1.022757168720793,
+        "bootstrap_central_95": [
+          0.8009322714833587,
+          1.2637644152538343
+        ],
+        "bootstrap_upper_one_sided_95": 1.2257207486915258
+      },
+      "both_solved": {
+        "n": 53,
+        "native_usd": 33.497372,
+        "codex_usd": 28.059706,
+        "reduction": -0.19378912950834204,
+        "ratio": 1.193789129508342,
+        "bootstrap_central_95": [
+          1.016236974354372,
+          1.3396225812692844
+        ],
+        "bootstrap_upper_one_sided_95": 1.317267764152139
+      }
+    }
+  }
+}

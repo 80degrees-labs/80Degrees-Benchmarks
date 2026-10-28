@@ -189,13 +189,13 @@ def analyze():
             accounting[model+' / '+arm]=dict(reservations=len(aa), measured_attempts=len(complete),
                 missing_usage=len(aa)-len(complete), observed_tokens=sum(a['input_tokens']+a['output_tokens'] for a in complete),
                 zero_model_call_local_failures=sum(a['state']=='local_prelaunch_failure' for a in aa))
-    result=dict(analysis_date='2026-10-28', analysis_version='1.0', seed=SEED, bootstraps=BOOTSTRAPS,
+    result=dict(analysis_date='2026-10-28', analysis_version='1.1', seed=SEED, bootstraps=BOOTSTRAPS,
                 task_cells=len(rows), scored_cells=sum(r['state']=='scored' for r in rows),
                 classifications=dict(Counter(r['classification'] for r in rows)),
                 attempt_states=dict(Counter(a['state'] for a in attempts)), accounting=accounting, models=models,
-                claim_a='Not supported by this study; superiority not demonstrated.',
-                claim_b_tokens='Not established: correctness noninferiority failed the predeclared evidence gate for both models.',
-                claim_b_money='Not measurable from available subscription billing; no actual-money savings claim.',
+                claim_a='Observed raw result: Sol draw; Astra favors Codex. No demonstrated 80 Degrees superiority.',
+                claim_b_tokens='Observed complete-pair tokens favor 80 Degrees; the combined comparable-correctness claim does not pass its evidence gate.',
+                claim_b_money='Observed Standard API-equivalent raw complete-pair cost favors 80 Degrees; see api-equivalent-costs.json. Not actual subscription spending.',
                 analysis_complete=True, evidence_complete=False,
                 limitation='Final conclusions on available evidence; unresolved verifier outcomes and historical exclusions remain unknown, not credited passes. No new paid trials.')
     (OUT/'analysis.json').write_text(json.dumps(result,indent=2)+'\n')

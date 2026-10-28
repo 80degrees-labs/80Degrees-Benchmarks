@@ -19,6 +19,7 @@ CHARTS=DATA/'charts'
 TEMP=ROOT/'tmp/pdfs'
 PDF=ROOT/'output/pdf'
 A=json.loads((DATA/'analysis.json').read_text())
+C=json.loads((DATA/'api-equivalent-costs.json').read_text())
 P=json.loads((DATA/'provenance.json').read_text())
 ROWS=json.loads((DATA/'task-results.json').read_text())
 MODELS=['gpt-6.1-sol','gpt-6-astra']
@@ -46,7 +47,7 @@ def charts():
         ax.bar_label(bars,labels=[f"{A['models'][m]['raw'][key]}/{A['models'][m]['raw']['n']} ({v:.1f}%)" for m,v in zip(MODELS,vals)],padding=4,fontsize=10)
     ax.set_xticks(x,NAMES); ax.set_ylim(0,100); ax.set_ylabel('Raw verifier success (%)'); ax.legend(loc='upper right',frameon=False)
     ax.set_title('Observed correctness - raw scores, medium reasoning',loc='left',weight='bold',pad=14)
-    fig.text(.12,-.03,'Raw zeroes include verifier failures. No superiority claim is established.',fontsize=9,color='#536176')
+    fig.text(.12,-.03,'Raw zeroes include verifier failures; see the evidence-quality analysis.',fontsize=9,color='#536176')
     savefig('correctness',fig)
 
     fig,axs=plt.subplots(1,2,figsize=(8,3.8))
@@ -74,6 +75,21 @@ def charts():
     wedges,_,_=ax.pie(vals,colors=[TEAL,BLUE,AMBER,'#8975a4',GREY],startangle=90,autopct=lambda p:f'{p:.1f}%' if p>2 else '',wedgeprops={'edgecolor':'white'})
     ax.legend(wedges,labels,loc='center left',bbox_to_anchor=(1,.5),frameon=False)
     ax.set_title('Evidence quality across all 356 cells',weight='bold'); savefig('evidence-quality',fig)
+
+    fig,axs=plt.subplots(1,2,figsize=(8,3.5))
+    for ax,m,n in zip(axs,MODELS,NAMES):
+        keys=['raw_complete','both_solved']
+        for j,(key,label,color) in enumerate([('native_usd','80 Degrees',TEAL),('codex_usd','Codex CLI',BLUE)]):
+            vals=[C['models'][m][k][key] for k in keys]
+            bars=ax.bar(np.arange(2)+(j-.5)*.34,vals,.34,label=label,color=color)
+            ax.bar_label(bars,labels=[f'${x:.2f}' for x in vals],padding=3,fontsize=9)
+        ax.set_xticks([0,1],['Raw complete','Both solved']); ax.set_title(n,weight='bold'); ax.set_ylim(0,max(C['models'][m]['raw_complete']['codex_usd'],C['models'][m]['raw_complete']['native_usd'])*1.3)
+        ax.set_ylabel('API-equivalent USD')
+    axs[0].legend(frameon=False,fontsize=8)
+    fig.subplots_adjust(top=.80,wspace=.35)
+    fig.suptitle('Standard API-equivalent cost - observed cache mix',fontsize=12,weight='bold')
+    fig.text(.12,-.025,'Estimated text-token cost, not subscription charges. Subsets have different coverage.',fontsize=9)
+    savefig('api-equivalent-cost',fig)
 
 
 STYLES=getSampleStyleSheet()
@@ -122,10 +138,10 @@ def build(name,story,title):
 def investor():
     story=[para('80 Degrees<br/>Benchmark evidence','Title80'),
            para('Investor assessment | Final conclusions on available evidence | 28 October 2026','Small80'),
-           para('<b>The current study does not validate either proposed comparative claim.</b> 80 Degrees tied Codex on raw Sol success and scored lower on raw Astra success. Recorded token totals were lower on complete pairs, but comparable correctness was not established.'),
-           table([['Claim','Conclusion'],['A: More tasks solved','Not supported. No statistically demonstrated superiority on either model.'],
-                  ['B: Comparable correctness, fewer tokens','Not established. Both models fail the predeclared correctness noninferiority evidence gate.'],
-                  ['B: Less money','Not measurable from subscription billing. No actual-dollar savings claim.']],[180,348]),Spacer(1,10),pic('correctness'),
+           para('<b>Observed scorecard: Sol is a draw; Astra favors Codex on task success.</b> 80 Degrees uses fewer total tokens and has lower Standard API-equivalent cost on complete raw pairs. These are completed measurements, not a cancelled study. Equal-correctness efficiency is a separate test that this study does not pass.'),
+           table([['Question','Observed result and claim decision'],['A: More tasks solved','Sol: draw (62 vs 62). Astra: Codex ahead (65 vs 59). No 80 Degrees superiority claim.'],
+                  ['B: Comparable correctness, fewer tokens','80 Degrees uses 23.8% / 27.5% fewer raw complete-pair tokens. The comparable-correctness requirement is not met.'],
+                  ['B: Lower API-equivalent token cost','80 Degrees estimates are 1.6% / 12.1% lower on raw complete pairs. This is modeled cost, not subscription spending.']],[180,348]),Spacer(1,10),pic('correctness'),
            para('Scope: 89 Terminal-Bench 2.0 tasks per model, medium reasoning, 80 Degrees native headless single-agent profile versus Codex CLI 0.163.0. 352 scored cells; four historical exclusions. This is first-party research, not independent certification.','Small80'),PageBreak(),
            para('Correctness and uncertainty','Title80'),
            para('The paired comparison is the unit of analysis. Equal observed success is not evidence of equivalence. Negative point estimates are also not, by themselves, proof of inferiority.'),
@@ -138,7 +154,7 @@ def investor():
            table([['Complete raw pairs','6.1 Sol (86 pairs)','6 Astra (88 pairs)'],['80 Degrees input + output','29,679,726','25,281,642'],['Codex input + output','38,966,944','34,886,113'],['Observed reduction','23.8%','27.5%'],['Paired bootstrap central 95% ratio interval','0.563 to 1.047','0.488 to 1.035'],['One-sided 95% upper ratio bound','0.995','0.984']],[240,144,144]),Spacer(1,10),
            para('The correctness gate fails before token savings can substantiate Claim B. Even the two-sided token intervals include a ratio of 1. Both-solved subsets show 20.9% fewer tokens for Sol but <b>21.6% more for Astra</b>. These outcome-selected subsets are descriptive, not causal or equivalent-correctness tests.'),
            para('Two native timeout trials have missing usage; complete pairs omit the matched Codex trials too. Cached tokens are included in input once; reasoning is included in output. No missing measurement is replaced with zero. Early unfinished exits can reduce tokens while reducing usefulness.'),
-           para('Money: both arms used Codex subscription access. Task-level invoices, marginal subscription charges and equal-priced API transactions were not observed. Tokens are not dollars; no monetary savings estimate is presented.'),PageBreak(),
+           para('Cost: Standard API-equivalent estimates are now calculated from official rates and the observed cache mix; see the cost appendix. They favor 80 Degrees on raw complete pairs but favor Codex on both-solved pairs. They are not observed subscription charges.'),PageBreak(),
            para('What the evidence can support','Title80'),pic('evidence-quality'),
            para('42 raw zeroes have an unavailable verifier: 31 Python-download timeouts, nine network/package setup failures and two interrupted package-manager states. Four additional zeroes mix output assertions with browser dependency errors and remain failures in the primary raw view. The precise cause of every environment failure is not attributed to the provider or harness.'),
            table([['Recorded ledger disposition','Count'],['Scored cells','352'],['Historical reservations (four excluded cells)','10'],['Explicit provider-capacity failures','7'],['Local missing-runtime failure before model launch','1'],['Total recorded reservations','370']],[410,118]),Spacer(1,10),
@@ -151,6 +167,7 @@ def investor():
            para('Exact paired McNemar with Holm adjustment across models; conservative paired win/loss bounds at alpha .025 per tail; predeclared 5-point noninferiority margin. Token ratios use 50,000 paired percentile-bootstrap samples, seed 10262026. Resampling characterizes task variation; it cannot remove bias from missing results, selected tasks or shared conditions.'),
            para('The protocol followed earlier pilot observations, so it is not pristine preregistration. The parent source tree had a frontend lockfile modification outside the headless build; the actual engine checkout is recorded separately from the parent gitlink. Later portable-adapter commits were not used in this measurement.'),
            para('Public evidence: github.com/80degrees-labs/80Degrees-Benchmarks, public/studies/october-2026. Includes task CSV/JSON, attempt accounting, classifications, hashes, analysis code, charts and both reports. Raw traces remain private; a reviewer must inspect authorized redacted artifacts to independently verify their contents. Hashes alone do not establish correctness. No SWE-bench or competitor-CLI conclusions are made.','Small80')]
+    story.extend(cost_page())
     build('80degrees-investor-benchmark-report.pdf',story,'80 Degrees - Investor benchmark assessment')
 
 
@@ -166,7 +183,7 @@ def refinement():
     regression.sort(reverse=True)
     story=[para('80 Degrees<br/>Harness refinement','Title80'),
            para('Engineering evidence and next experiments | 28 October 2026','Small80'),
-           para('<b>Optimize completion reliability before advertising efficiency.</b> Current evidence supports neither superior correctness nor comparable correctness with lower tokens. Dollar savings are unmeasurable from the available subscription data. These are the same conclusions as the investor report.'),
+           para('<b>Observed result: Sol draws; Astra favors Codex on raw correctness.</b> 80 Degrees uses fewer raw complete-pair tokens, with Standard API-equivalent cost estimates 1.6% / 12.1% lower. The comparable-correctness gate is not met. On both-solved pairs, modeled costs favor Codex. Fix completion reliability before claiming equal-quality efficiency.'),
            pic('paired-outcomes'),
            para('Raw paired gaps: Sol has six wins and six losses; Astra six wins and 12 losses. Some discordances are verifier failures, so they are not all harness mistakes. Native wins that have valid paired verification must remain regression cases while fixing weaknesses.'),
            para('Priority order: (1) reconcile verifier availability and improve evidence collection; (2) prevent completion while required work is unfinished; (3) handle task ambiguity and output contracts; (4) investigate token regressions on solved tasks; (5) validate changes on an independent holdout.'),
@@ -208,9 +225,25 @@ def refinement():
            para('Trace provenance','H80'),
            para('Case studies are based on native final message events, paired raw results and verifier logs. Public rows include result/verifier SHA-256 hashes; private paired-evidence.json maps them to retained source files. Facts, hypotheses and proposed experiments are deliberately separate. No new competitor claims or SWE-bench results are implied.'),
            para('Measured source base: '+P['source_base_commit']+'<br/>Measured adapter: '+P['adapter_commit']+'<br/>Engine: '+P['engine_commit']+'<br/>Codex CLI 0.163.0; Harbor 0.24.0. Full provenance and statistical methods accompany the investor report.','Small80')]
+    story.extend(cost_page())
     build('80degrees-harness-refinement-report.pdf',story,'80 Degrees - Harness refinement evidence')
+
+
+def cost_page():
+    return [PageBreak(),para('API-equivalent cost scorecard','Title80'),
+            para('Official prices checked 28 October 2026. Standard text-token rates applied equally to both harnesses; no regional or priority premium. This answers a modeled-cost question, not actual subscription spending.'),pic('api-equivalent-cost',440),
+            table([['Measured subset','Sol: 80D / Codex','Astra: 80D / Codex'],
+                   ['Raw complete pairs (86 / 88)','$11.23 / $11.42','$55.99 / $63.68'],
+                   ['Observed cost reduction','1.6% lower','12.1% lower'],
+                   ['Resolved complete pairs (73 / 74)','$8.34 / $8.82','$45.93 / $44.91'],
+                   ['Both-solved pairs (56 / 53)','$5.67 / $5.45','$33.50 / $28.06'],
+                   ['Both-solved cost difference','80D 3.9% higher','80D 19.4% higher']],[248,140,140]),Spacer(1,9),
+            para('Formula: (uncached input x input rate + cache reads x cached rate + output x output rate) / 1,000,000. Zero cache writes were recorded. Rates per million: Sol $2 / $0.10 / $10; Astra $10 / $1 / $50, respectively. Reasoning and cached input are counted once.'),
+            para('No observed request exceeded the 272K-input long-context threshold. Two native aggregate/event residuals are below that threshold and priced from aggregate totals. Missing usage, retries, historical reservations, tool charges and subscription fees are excluded. Rate normalization does not prove what an actual API replay would cost.','Small80'),
+            para('Raw paired bootstrap 95% cost-ratio intervals: Sol [0.834, 1.159], Astra [0.689, 1.105]. Both include 1. A lower observed modeled total is a descriptive result, not proven equal-correctness cost superiority. Both-solved subsets are selected by outcomes.','Small80'),
+            para('Sources: developers.openai.com/api/docs/pricing; developers.openai.com/api/docs/models/gpt-6.1-sol; developers.openai.com/api/docs/models/gpt-6-astra. Reproduce with tooling/price_usage.py; numeric source-trace audit is in pricing-audit.json.','Small80')]
 
 
 if __name__=='__main__':
     charts(); investor(); refinement()
-    print('Generated two PDFs and four reproducible charts.')
+    print('Generated two PDFs and five reproducible charts.')

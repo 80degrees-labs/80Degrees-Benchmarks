@@ -1,6 +1,6 @@
 {
   "analysis_date": "2026-10-28",
-  "analysis_version": "1.0",
+  "analysis_version": "1.1",
   "seed": 10262026,
   "bootstraps": 50000,
   "task_cells": 356,
@@ -240,9 +240,9 @@
       ]
     }
   },
-  "claim_a": "Not supported by this study; superiority not demonstrated.",
-  "claim_b_tokens": "Not established: correctness noninferiority failed the predeclared evidence gate for both models.",
-  "claim_b_money": "Not measurable from available subscription billing; no actual-money savings claim.",
+  "claim_a": "Observed raw result: Sol draw; Astra favors Codex. No demonstrated 80 Degrees superiority.",
+  "claim_b_tokens": "Observed complete-pair tokens favor 80 Degrees; the combined comparable-correctness claim does not pass its evidence gate.",
+  "claim_b_money": "Observed Standard API-equivalent raw complete-pair cost favors 80 Degrees; see api-equivalent-costs.json. Not actual subscription spending.",
   "analysis_complete": true,
   "evidence_complete": false,
   "limitation": "Final conclusions on available evidence; unresolved verifier outcomes and historical exclusions remain unknown, not credited passes. No new paid trials."

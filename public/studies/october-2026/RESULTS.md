@@ -18,9 +18,12 @@ bounds for the paired success difference (80D minus Codex) are -11.84 points for
 Sol and -19.85 for Astra, below the required -5 points. Token savings cannot rescue
 a failed correctness gate. Failing this gate is not proof of inferiority.
 
-**B - less money: not measurable from the collected data.** No actual per-task
-subscription charges are observed. Token counts are not dollar savings. No API
-price-equivalent estimate is used as a substitute for billing evidence.
+**B - modeled token cost: observed raw complete-pair totals favor 80 Degrees.**
+At official Standard API rates checked 28 October, estimates are $11.23 vs $11.42
+for Sol (1.6% lower) and $55.99 vs $63.68 for Astra (12.1% lower). See
+[the complete cost calculation](COSTS.md). These are API-equivalent estimates;
+actual subscription spending remains unmeasured. The both-solved cost subset
+favors Codex, and the correctness gate remains unchanged.
 
 ## Token results and uncertainty
 
@@ -91,6 +94,7 @@ environment, then run:
 
 ```sh
 python tooling/final_analysis.py
+python tooling/price_usage.py
 python tooling/build_reports.py
 python -m unittest discover -s tests -v
 python tooling/audit_public.py

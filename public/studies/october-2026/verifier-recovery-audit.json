@@ -1,0 +1,258 @@
+{
+  "checked_at": "2026-10-28T09:37:28.560734+00:00",
+  "trials": [
+    {
+      "cell": "gpt-6-astra--medium--build-pov-ray--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--compile-compcert--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--fix-ocaml-gc--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--git-leak-recovery--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--git-leak-recovery--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--git-multibranch--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--git-multibranch--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--password-recovery--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--path-tracing--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--path-tracing--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--qemu-alpine-ssh--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--qemu-alpine-ssh--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--qemu-startup--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--qemu-startup--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--rstan-to-pystan--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--sqlite-with-gcov--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--sqlite-with-gcov--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--torch-pipeline-parallelism--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--train-fasttext--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6-astra--medium--write-compressor--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--custom-memory-heap-crash--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--custom-memory-heap-crash--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--dna-assembly--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--dna-assembly--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--dna-insert--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--dna-insert--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--extract-moves-from-video--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--financial-document-processor--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--financial-document-processor--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--git-leak-recovery--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--git-leak-recovery--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--install-windows-3.11--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--mcmc-sampling-stan--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--overfull-hbox--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--polyglot-rust-c--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--polyglot-rust-c--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--qemu-alpine-ssh--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--qemu-alpine-ssh--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--qemu-startup--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--qemu-startup--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--train-fasttext--80degrees",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    },
+    {
+      "cell": "gpt-6.1-sol--medium--train-fasttext--codex",
+      "saved_artifact_file_count": 0,
+      "original_container_present": false,
+      "artifact_manifest_sha256": "a2d6f66d545a09b9110b4ed84222030b77da51bde34a61ce9b0ca18e4d51586f"
+    }
+  ],
+  "decision": "Original solution snapshots unavailable for verifier-only repair. No selective agent reruns performed; original scores retained."
+}
