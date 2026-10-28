@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="402.888563pt" height="229.102125pt" viewBox="0 0 402.888563 229.102125" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-28</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 229.102125
+L 402.888563 229.102125
+L 402.888563 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 129.3075 42.276525
+C 114.657494 42.276525 100.286316 46.309088 87.774912 53.930599
+C 75.263508 61.552109 65.088126 72.472454 58.368142 85.490306
+C 51.648157 98.508159 48.639367 113.127991 49.672763 127.741504
+C 50.70616 142.355017 55.742405 156.405944 64.227473 168.348569
+C 72.71254 180.291195 84.323443 189.67092 97.782889 195.455899
+C 111.242335 201.240879 126.037987 203.210906 140.542203 201.149262
+C 155.046419 199.087618 168.707094 193.07278 180.021443 183.766428
+C 191.335792 174.460076 199.873131 162.21646 204.694285 148.382474
+L 129.3075 122.110125
+z
+" style="fill: #087f8c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 204.694285 148.382474
+C 209.200951 135.450891 210.305357 121.574651 207.900911 108.093014
+C 205.496465 94.611377 199.663094 81.972487 190.963803 71.396182
+L 129.3075 122.110125
+z
+" style="fill: #4056a1; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 190.963803 71.396182
+C 184.680433 63.757073 177.031727 57.351816 168.408061 52.507324
+C 159.784394 47.662832 150.335016 44.462949 140.542203 43.070988
+L 129.3075 122.110125
+z
+" style="fill: #c57b17; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 140.542203 43.070988
+C 139.612183 42.938794 138.679903 42.823025 137.745797 42.723736
+C 136.811692 42.624446 135.875907 42.541651 134.938879 42.475388
+L 129.3075 122.110125
+z
+" style="fill: #8975a4; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 134.938879 42.475388
+C 134.001851 42.409126 133.063727 42.359408 132.124945 42.326256
+C 131.186162 42.293105 130.246868 42.276525 129.3075 42.276525
+L 129.3075 122.110125
+z
+" style="fill: #cbd5e1; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="90.259484" y="152.450848" transform="rotate(-0 90.259484 152.450848)">69.7%</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="176.463547" y="116.297515" transform="rotate(-0 176.463547 116.297515)">16.3%</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="152.767836" y="82.946101" transform="rotate(-0 152.767836 82.946101)">11.8%</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="129.3075" y="16.318125" transform="rotate(-0 129.3075 16.318125)">Evidence quality across all 356 cells</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_7">
+     <path d="M 238.0995 94.706609
+L 258.0995 94.706609
+L 258.0995 87.706609
+L 238.0995 87.706609
+z
+" style="fill: #087f8c; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="266.0995" y="94.706609" transform="rotate(-0 266.0995 94.706609)">Verified passes: 248</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 238.0995 109.707391
+L 258.0995 109.707391
+L 258.0995 102.707391
+L 238.0995 102.707391
+z
+" style="fill: #4056a1; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="266.0995" y="109.707391" transform="rotate(-0 266.0995 109.707391)">Verified failures: 58</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 238.0995 124.708172
+L 258.0995 124.708172
+L 258.0995 117.708172
+L 238.0995 117.708172
+z
+" style="fill: #c57b17; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="266.0995" y="124.708172" transform="rotate(-0 266.0995 124.708172)">Verifier unavailable: 42</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 238.0995 139.708953
+L 258.0995 139.708953
+L 258.0995 132.708953
+L 238.0995 132.708953
+z
+" style="fill: #8975a4; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="266.0995" y="139.708953" transform="rotate(-0 266.0995 139.708953)">Mixed browser failures: 4</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 238.0995 154.709734
+L 258.0995 154.709734
+L 258.0995 147.709734
+L 238.0995 147.709734
+z
+" style="fill: #cbd5e1; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="266.0995" y="154.709734" transform="rotate(-0 266.0995 154.709734)">Historical exclusions: 4</text>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

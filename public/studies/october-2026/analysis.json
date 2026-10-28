@@ -1,0 +1,249 @@
+{
+  "analysis_date": "2026-10-28",
+  "analysis_version": "1.0",
+  "seed": 10262026,
+  "bootstraps": 50000,
+  "task_cells": 356,
+  "scored_cells": 352,
+  "classifications": {
+    "verified_pass": 248,
+    "verified_fail": 58,
+    "verifier_dependency_download_timeout": 31,
+    "mixed_assertion_and_browser_dependency_failure": 4,
+    "verifier_setup_network_or_package_failure": 9,
+    "verifier_setup_interrupted_dpkg": 2,
+    "historical_excluded": 4
+  },
+  "attempt_states": {
+    "historical": 10,
+    "scored": 352,
+    "provider_capacity": 7,
+    "local_prelaunch_failure": 1
+  },
+  "accounting": {
+    "gpt-6.1-sol / 80degrees": {
+      "reservations": 97,
+      "measured_attempts": 89,
+      "missing_usage": 8,
+      "observed_tokens": 30152859,
+      "zero_model_call_local_failures": 0
+    },
+    "gpt-6.1-sol / codex": {
+      "reservations": 94,
+      "measured_attempts": 90,
+      "missing_usage": 4,
+      "observed_tokens": 43298117,
+      "zero_model_call_local_failures": 0
+    },
+    "gpt-6-astra / 80degrees": {
+      "reservations": 89,
+      "measured_attempts": 88,
+      "missing_usage": 1,
+      "observed_tokens": 25281642,
+      "zero_model_call_local_failures": 0
+    },
+    "gpt-6-astra / codex": {
+      "reservations": 90,
+      "measured_attempts": 89,
+      "missing_usage": 1,
+      "observed_tokens": 37253530,
+      "zero_model_call_local_failures": 1
+    }
+  },
+  "models": {
+    "gpt-6.1-sol": {
+      "raw": {
+        "n": 87,
+        "native_solved": 62,
+        "codex_solved": 62,
+        "native_only": 6,
+        "codex_only": 6,
+        "both_solved": 56,
+        "both_failed": 19,
+        "difference": 0.0,
+        "mcnemar_p": 1.0,
+        "noninferiority_lower": -0.11835843163006235,
+        "superiority_lower": -0.11835843163006235,
+        "mcnemar_holm": 1
+      },
+      "resolved_pairs": {
+        "n": 74,
+        "native_solved": 60,
+        "codex_solved": 61,
+        "native_only": 4,
+        "codex_only": 5,
+        "both_solved": 56,
+        "both_failed": 9,
+        "difference": -0.013513513513513514,
+        "mcnemar_p": 1.0,
+        "noninferiority_lower": -0.13575638335092657,
+        "superiority_lower": -0.13575638335092657,
+        "mcnemar_holm": 1
+      },
+      "tokens_raw_complete": {
+        "n": 86,
+        "native_tokens": 29679726,
+        "codex_tokens": 38966944,
+        "ratio": 0.7616641941436311,
+        "reduction": 0.23833580585636893,
+        "bootstrap_upper_one_sided_95": 0.9953127229019355,
+        "bootstrap_central_95": [
+          0.5632314600627946,
+          1.0469123924292834
+        ]
+      },
+      "tokens_resolved_complete": {
+        "n": 73,
+        "native_tokens": 19258639,
+        "codex_tokens": 29097652,
+        "ratio": 0.6618623042161615,
+        "reduction": 0.33813769578383845,
+        "bootstrap_upper_one_sided_95": 0.882407054323077,
+        "bootstrap_central_95": [
+          0.5110354540623021,
+          0.931169006187099
+        ]
+      },
+      "tokens_both_solved_descriptive": {
+        "n": 56,
+        "native_tokens": 12969990,
+        "codex_tokens": 16394885,
+        "ratio": 0.7910997850854092,
+        "reduction": 0.20890021491459076,
+        "bootstrap_upper_one_sided_95": 1.0840884328802058,
+        "bootstrap_central_95": [
+          0.5793644462791929,
+          1.1272706556301477
+        ]
+      },
+      "full89_difference_sensitivity": [
+        -0.14606741573033707,
+        0.14606741573033707
+      ],
+      "expanded_difference_sensitivity": [
+        -0.15730337078651685,
+        0.15730337078651685
+      ],
+      "unknown_cells": 26,
+      "raw_wins": [
+        "extract-moves-from-video",
+        "mcmc-sampling-stan",
+        "merge-diff-arc-agi-task",
+        "polyglot-c-py",
+        "pypi-server",
+        "raman-fitting"
+      ],
+      "raw_losses": [
+        "compile-compcert",
+        "mteb-leaderboard",
+        "overfull-hbox",
+        "protein-assembly",
+        "rstan-to-pystan",
+        "video-processing"
+      ]
+    },
+    "gpt-6-astra": {
+      "raw": {
+        "n": 89,
+        "native_solved": 59,
+        "codex_solved": 65,
+        "native_only": 6,
+        "codex_only": 12,
+        "both_solved": 53,
+        "both_failed": 18,
+        "difference": -0.06741573033707865,
+        "mcnemar_p": 0.237884521484375,
+        "noninferiority_lower": -0.1985412472184808,
+        "superiority_lower": -0.1985412472184808,
+        "mcnemar_holm": 0.47576904296875
+      },
+      "resolved_pairs": {
+        "n": 75,
+        "native_solved": 58,
+        "codex_solved": 60,
+        "native_only": 5,
+        "codex_only": 7,
+        "both_solved": 53,
+        "both_failed": 10,
+        "difference": -0.02666666666666667,
+        "mcnemar_p": 0.7744140625,
+        "noninferiority_lower": -0.16089427408646878,
+        "superiority_lower": -0.16089427408646878,
+        "mcnemar_holm": 1
+      },
+      "tokens_raw_complete": {
+        "n": 88,
+        "native_tokens": 25281642,
+        "codex_tokens": 34886113,
+        "ratio": 0.724690710025505,
+        "reduction": 0.275309289974495,
+        "bootstrap_upper_one_sided_95": 0.9839514736645748,
+        "bootstrap_central_95": [
+          0.4881693381334948,
+          1.0353093521274823
+        ]
+      },
+      "tokens_resolved_complete": {
+        "n": 74,
+        "native_tokens": 20958501,
+        "codex_tokens": 22696802,
+        "ratio": 0.9234120736480849,
+        "reduction": 0.07658792635191514,
+        "bootstrap_upper_one_sided_95": 1.2197506392864637,
+        "bootstrap_central_95": [
+          0.6072006452982092,
+          1.2752941489798189
+        ]
+      },
+      "tokens_both_solved_descriptive": {
+        "n": 53,
+        "native_tokens": 16125794,
+        "codex_tokens": 13265337,
+        "ratio": 1.2156339488397467,
+        "reduction": -0.21563394883974674,
+        "bootstrap_upper_one_sided_95": 1.4238570397514725,
+        "bootstrap_central_95": [
+          0.8802594622556541,
+          1.4594614326237383
+        ]
+      },
+      "full89_difference_sensitivity": [
+        -0.15730337078651685,
+        0.06741573033707865
+      ],
+      "expanded_difference_sensitivity": [
+        -0.16853932584269662,
+        0.07865168539325842
+      ],
+      "unknown_cells": 20,
+      "raw_wins": [
+        "password-recovery",
+        "polyglot-c-py",
+        "polyglot-rust-c",
+        "pypi-server",
+        "raman-fitting",
+        "video-processing"
+      ],
+      "raw_losses": [
+        "break-filter-js-from-html",
+        "build-pov-ray",
+        "compile-compcert",
+        "crack-7z-hash",
+        "fix-ocaml-gc",
+        "mcmc-sampling-stan",
+        "mteb-retrieve",
+        "protein-assembly",
+        "pytorch-model-recovery",
+        "rstan-to-pystan",
+        "sanitize-git-repo",
+        "write-compressor"
+      ]
+    }
+  },
+  "claim_a": "Not supported by this study; superiority not demonstrated.",
+  "claim_b_tokens": "Not established: correctness noninferiority failed the predeclared evidence gate for both models.",
+  "claim_b_money": "Not measurable from available subscription billing; no actual-money savings claim.",
+  "analysis_complete": true,
+  "evidence_complete": false,
+  "limitation": "Final conclusions on available evidence; unresolved verifier outcomes and historical exclusions remain unknown, not credited passes. No new paid trials."
+}

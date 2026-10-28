@@ -1,0 +1,24 @@
+{
+  "models": [
+    "gpt-6.1-sol",
+    "gpt-6-astra"
+  ],
+  "reasoning": "medium",
+  "tasks": 89,
+  "primary_cells": 356,
+  "adapter_commit": "770667538eb64aae2169b4006aa41ee781ae994c",
+  "source_base_commit": "7a6e9e9acbd00eae1c0548a4c4f054b94c203faa",
+  "engine_commit": "028c1d7c7eb753421012bf96472a4ea040667f19",
+  "codex_cli": "0.163.0",
+  "dataset_commit": "69671fbaac6d67a7ef0dfec016cc38a64ef7a77c",
+  "harbor_commit": "209a48a7424218828465c3c716b042f2b381dbed",
+  "harbor_version": "0.24.0",
+  "architecture": "Apple Silicon host; linux/amd64 containers under emulation",
+  "source_note": "Headless single-agent profile; dirty frontend lockfile excluded. Actual engine checkout differs from parent gitlink.",
+  "ledger_sha256": "71b16061faa12c3601035ebd7d1b7e7da0fa40893a95fc040f5f961ec5f09b5e",
+  "protocol_sha256": "134fd758276765f2534d92343c65aea808e04c6090889c61da1065a245aa85e9",
+  "frozen_manifest_sha256": "2745c161edc0dcc2dcb11514cbcb68a2078a8b6779727469187cff620374328c",
+  "redaction": "Allowlisted numeric outcomes, classifications, task IDs and content hashes only. No transcript, credential, account/session identifier or local path exported.",
+  "scope": "370 ledger reservations including historical attempts; separate synthetic preflights are outside this ledger.",
+  "audit_limit": "First-party artifact review, not an independent audit. Hashes attest retained evidence identity, not correctness by themselves."
+}

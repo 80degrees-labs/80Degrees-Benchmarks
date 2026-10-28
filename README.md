@@ -17,26 +17,60 @@ implementation belong in **crbn**; this repository owns the evidence and study t
 
 | Question | Required evidence | Current conclusion |
 |---|---|---|
-| **A · More tasks solved** | Same model and effort; paired verifier outcomes; uncertainty | Not established; final adjudication pending |
-| **B · Comparable correctness, fewer tokens** | Correctness noninferiority first, then complete paired token accounting | Not established; final analysis pending |
-| **B · Less money** | Observable, comparable monetary cost | Per-task subscription charges unavailable |
+| **A · More tasks solved** | Same model and effort; paired verifier outcomes; uncertainty | **Not supported by this study.** Raw Sol tied; raw Astra favored Codex. Neither superiority test passed. |
+| **B · Comparable correctness, fewer tokens** | Correctness noninferiority first, then complete paired token accounting | **Not established.** Both models failed the predeclared correctness evidence gate, despite lower raw complete-pair token totals. |
+| **B · Less money** | Observable, comparable monetary cost | **Not measurable from these data.** Subscription access provides no actual per-task dollar charges. |
 
 ![Study coverage, provisional](public/studies/october-2026/coverage.svg)
 
 The chart is a dated ledger snapshot, **not a leaderboard or final report**.
 Execution finished on 27 October 2026 at 17:18 UTC: **352 scored cells and four
-historical exclusions**, with no pending trials. This is execution completion,
-not completion of the statistical analysis or evidence adjudication.
-Recorded outcomes include unresolved verifier/infrastructure issues. We publish
-negative and inconclusive findings as well as positive ones. No final investor
-claim should be inferred from progress counts.
+historical exclusions**, with no pending trials. The **available-evidence analysis
+is complete as of 28 October**. Unresolved outcomes remain unknown; completion of
+analysis does not make the evidence complete. No additional paid runs were made.
+
+### Reports and evidence
+
+- [Investor assessment (PDF)](public/studies/october-2026/reports/80degrees-investor-benchmark-report.pdf)
+- [Harness refinement report (PDF)](public/studies/october-2026/reports/80degrees-harness-refinement-report.pdf)
+- [Final analysis and limitations](public/studies/october-2026/RESULTS.md)
+- [Task-level CSV](public/studies/october-2026/task-results.csv), [analysis JSON](public/studies/october-2026/analysis.json), [attempt accounting](public/studies/october-2026/attempts.json), [provenance and redaction](public/studies/october-2026/provenance.json)
+
+| Medium reasoning | Raw paired success: 80 Degrees / Codex | Raw token reduction* | Correctness lower bound** |
+|---|---:|---:|---:|
+| 6.1 Sol | 62/87 / 62/87 (71.3% / 71.3%) | 23.8% (86 complete pairs) | -11.84 percentage points |
+| 6 Astra | 59/89 / 65/89 (66.3% / 73.0%) | 27.5% (88 complete pairs) | -19.85 percentage points |
+
+\* Input plus output, cached input counted once. Complete scored pairs only;
+failed-attempt consumption and missing telemetry are not included in these ratios.
+\** Conservative 95% one-sided bound for 80 Degrees minus Codex. The predeclared
+noninferiority requirement is a lower bound above **-5 points**. Neither passes.
+Equal observed success does not prove equivalence; failure of noninferiority does
+not by itself prove inferiority. Exact McNemar Holm-adjusted p-values are 1.0000
+and 0.4758, respectively.
+
+![Raw paired correctness](public/studies/october-2026/charts/correctness.svg)
+![Paired outcome pie charts](public/studies/october-2026/charts/paired-outcomes.svg)
+![Token ratios by evidence subset](public/studies/october-2026/charts/token-ratios.svg)
+
+On tasks **both harnesses solve**, Sol uses 20.9% fewer tokens, but Astra uses
+**21.6% more**. These selected subsets are descriptive. They are not evidence of
+comparable overall correctness. Two-sided 95% bootstrap intervals for the raw
+token ratios include 1 for both models; detailed bounds are in the reports.
+
+![Evidence-quality pie chart](public/studies/october-2026/charts/evidence-quality.svg)
+
+The audit identifies 42 scored zeroes with an unavailable verifier, four mixed
+browser/assertion failures and four historical exclusions. Raw scores are retained.
+Resolved-pair and missing-outcome sensitivity analyses also do not establish the
+claims. These are first-party findings, not an independent audit or certification.
 
 ## One runner, explicit comparisons
 
 | Harness | Integration | Evidence status |
 |---|---|---|
-| 80 Degrees | Frozen native engine adapter in crbn | Execution finished; analysis pending; medium only |
-| Codex CLI | Pinned CLI adapter in crbn | Execution finished; analysis pending; version 0.163.0 |
+| 80 Degrees | Frozen native engine adapter in crbn | Available-evidence analysis complete; medium only |
+| Codex CLI | Pinned CLI adapter in crbn | Available-evidence analysis complete; version 0.163.0 |
 | Claude Code | Version-checked portable CLI profile | Experimental; no scored validation here |
 | Cursor Agent | Version-checked portable CLI profile | Experimental; effort mapping must be verified |
 | Google Antigravity CLI | Version-checked portable CLI profile | Experimental; no scored validation here |

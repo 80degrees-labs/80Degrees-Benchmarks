@@ -20,6 +20,13 @@ def export():
                   note='Ledger state is not proof of a live process or adjudicated correctness.')
     out = ROOT / 'public/studies/october-2026'
     out.mkdir(parents=True, exist_ok=True)
+    analysis_file = out / 'analysis.json'
+    if analysis_file.exists():
+        analysis = json.loads(analysis_file.read_text())
+        result.update(analysis_complete=analysis['analysis_complete'],
+                      evidence_complete=analysis['evidence_complete'],
+                      claim_a=analysis['claim_a'], claim_b=analysis['claim_b_tokens'],
+                      claim_b_money=analysis['claim_b_money'])
     (out / 'progress.json').write_text(json.dumps(result, indent=2) + '\n')
     n = sum(counts.values())
     done = counts.get('scored', 0)

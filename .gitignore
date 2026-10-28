@@ -1,6 +1,7 @@
 # Default deny: the live study contains credentials-adjacent logs and local paths.
 /*
 !/.gitignore
+!/.gitattributes
 !/README.md
 !/CONTRIBUTING.md
 !/SECURITY.md
